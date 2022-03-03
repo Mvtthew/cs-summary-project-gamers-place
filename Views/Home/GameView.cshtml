@@ -1,0 +1,18 @@
+﻿@model GamersPlace.Models.Game
+
+@{
+    ViewData["Title"] = Model.Name + " :: GamersPlace";
+}
+
+<div class="container position-relative">
+    <a asp-action="Index" class="position-absolute text-light" style="right: 0">⬅️ Go back to games list...</a>
+
+    <img class="w-auto mb-5" style="height: 300px" src="@Model.CoverImageUrl" />
+
+    <h1 class="display-4">@Model.Name</h1>
+
+    <p class="game-genre">🗄 @Model.GameGenre.Name</p>
+    <p class="game-description mb-1">📁 @Model.description</p>
+    <p class="game-score mb-1">⭐️ @Model.Score</p>
+    <p class="game-year">📅 @Model.YearReleased</p>
+</div>

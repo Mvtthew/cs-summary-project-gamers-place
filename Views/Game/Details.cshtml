@@ -1,0 +1,51 @@
+@model GamersPlace.Models.Game
+
+@{
+    ViewData["Title"] = "Game details :: GamersPlace";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Game</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GameGenre.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Score)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Score)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.YearReleased)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.YearReleased)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CoverImageUrl)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CoverImageUrl)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-sm btn-primary btn-block" asp-action="Edit" asp-route-id="@Model.GameId">Edit</a> 
+    <a asp-action="Index">Back to List</a>
+</div>
